@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флюорография и Диаскинтест: современные методы выявления туберкулёза</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        body {
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+        
+        .article-container {
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 50px 60px;
+            position: relative;
+        }
+        
+        .article-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #eaeaea;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #3498db, transparent);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 34px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 20px;
+            font-weight: normal;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .author {
+            color: #95a5a6;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        .content-section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 26px;
+            margin: 35px 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0f0;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .subsection-title {
+            color: #3498db;
+            font-size: 21px;
+            margin: 25px 0 15px 0;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(to right, #f8f9fa, #f0f7ff);
+            border-left: 5px solid #3498db;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .info-box {
+            background-color: #f0f9ff;
+            border: 1px solid #d1e7ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .info-box::before {
+            content: 'ℹ️';
+            position: absolute;
+            top: 20px;
+            left: -15px;
+            background: white;
+            border: 2px solid #d1e7ff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 35px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #555;
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+        
+        .image-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 15px;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .numbered-list {
+            counter-reset: list-counter;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .numbered-list li {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 20px;
+        }
+        
+        .numbered-list li::before {
+            counter-increment: list-counter;
+            content: counter(list-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #3498db;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 3px 6px rgba(52, 152, 219, 0.3);
+        }
+        
+        .question-box {
+            background: linear-gradient(to right, #fff8e1, #fffde7);
+            border-left: 5px solid #ffb300;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .question {
+            font-weight: bold;
+            color: #ff8f00;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .answer {
+            color: #333;
+            padding-left: 20px;
+            border-left: 3px solid #ffb300;
+            margin-top: 15px;
+        }
+        
+        .conclusion {
+            background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+            border-left: 5px solid #4caf50;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 0 10px 10px 0;
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 15px;
+        }
+        
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .figure-item {
+            text-align: center;
+        }
+        
+        .figure-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                font-size: 14pt;
+            }
+            
+            .article-container {
+                box-shadow: none;
+                padding: 20px;
+                page-break-inside: avoid;
+            }
+            
+            .image-container, .figure-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            .image-container:hover {
+                transform: none;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            .article-container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .section-title {
+                font-size: 22px;
+            }
+            
+            .figure-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <div class="header">
+            <h1>Флюорография и Диаскинтест: современные методы выявления туберкулёза</h1>
+            <p class="subtitle">Ранняя диагностика — залог успешного лечения</p>
+            <p class="author">Информационный материал для пациентов</p>
+        </div>
+        
+        <div class="content-section">
+            <p>Флюорография — это эффективный скрининговый метод выявления туберкулёза лёгких на ранних стадиях. Понятие <span class="highlight">«скрининг»</span> подразумевает массовое рентгенологическое обследование населения, направленное на раннее обнаружение заболеваний, которые на начальных этапах протекают бессимптомно, без жалоб.</p>
+            
+            <p>Туберкулёз в начальной стадии часто развивается без явных клинических признаков. Жалобы появляются лишь тогда, когда патологический процесс охватывает значительную часть лёгочной ткани. Именно в этот период возникают слабость, кашель и повышение температуры.</p>
+            
+            <div class="info-box">
+                <p>Таким образом, флюорография позволяет своевременно выявить не только туберкулёз, но и другие патологии лёгких (включая онкологические), а также начать лечение на ранних стадиях, что существенно повышает шансы на полное выздоровление.</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Нормативные требования к флюорографическим обследованиям</h2>
+            
+            <p>Согласно нормативным требованиям РФ, флюорографические осмотры должны проходить все граждане. Отдельные группы населения обследуются ежегодно, другие — раз в 2 года, а работники родильных домов — каждые полгода.</p>
+            
+            <h3 class="subsection-title">Ежегодную флюорографию проходят следующие категории:</h3>
+            
+            <ol class="numbered-list">
+                <li><span class="highlight">Декретированные группы населения</span> — должностные лица и сотрудники организаций, чья деятельность связана с производством, хранением, транспортировкой и реализацией пищевых продуктов и питьевой воды, воспитанием и обучением детей, а также с коммунальным и бытовым обслуживанием населения.</li>
+                
+                <li><span class="highlight">Пациенты с хроническими заболеваниями</span>, ослабляющими защитные силы организма: сахарный диабет, патологии желудочно-кишечного тракта, хронические болезни лёгких и мочеполовой системы. У таких пациентов повышен риск развития туберкулёза, поэтому они относятся к группе риска.</li>
+            </ol>
+            
+            <div class="highlight-box">
+                <p>Остальное население проходит флюорографические осмотры не реже <span class="highlight">одного раза в 2 года</span>. В качестве альтернативы могут использоваться рентгенография или компьютерная томография лёгких.</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Клинические примеры: визуальная диагностика</h2>
+            
+            <div class="image-container">
+                <!-- Замените image1.png на ваш файл -->
+                <img src="image1.png" alt="Флюорографический снимок пациента А">
+                <p class="image-caption"><span class="image-number">Рис. 1</span> Пациент «А». Пример того, как ежегодное флюорографическое исследование помогает выявить туберкулёз лёгких на ранней стадии.</p>
+            </div>
+            
+            <div class="image-container">
+                <!-- Замените image2.png на ваш файл -->
+                <img src="image2.png" alt="Фрагмент флюорограммы пациента А">
+                <p class="image-caption"><span class="image-number">Рис. 2</span> Пациент «А» (фрагмент, увеличение Рис. 1).</p>
+            </div>
+            
+            <div class="highlight-box">
+                <p>На флюорографическом снимке видны изменения в лёгочной ткани верхней доли правого лёгкого — в области пересечения правой ключицы и первого ребра.</p>
+                <p>Специалист, анализируя снимок, обратит внимание на то, что контуры первого ребра и ключицы справа выглядят менее чёткими и ровными по сравнению с левой стороной.</p>
+                <p>Вы также можете это заметить: сравните верхние границы левой и правой ключиц, а также рёбер, пересекающих ключицы перпендикулярно. Слева контуры видны отчётливо, а справа — размыты, что связано с развивающимся под этим участком туберкулёзным процессом.</p>
+            </div>
+            
+            <p>Для уточнения диагноза пациенту было назначено дополнительное исследование — компьютерная томография (КТ).</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Компьютерная томография: современный метод диагностики</h2>
+            
+            <p>Компьютерная томография (КТ) обладает значительно более высокой детализацией по сравнению с флюорографией и рентгенографией. В отличие от стандартного рентгена, где лучи проходят через тело в одном направлении, при КТ рентгеновская трубка с детекторами движется по спирали вокруг пациента, создавая множество снимков с разных ракурсов. Это позволяет получать изображения в различных плоскостях и выполнять трёхмерную реконструкцию исследуемой области.</p>
+            
+            <div class="figure-grid">
+                <div class="figure-item">
+                    <!-- Замените image3.png на ваш файл -->
+                    <img src="image3.png" alt="Трёхмерное КТ-изображение">
+                    <p class="image-caption"><span class="image-number">Рис. 3</span> Пациент «А» — трёхмерное изображение, полученное при компьютерной томографии. В верхней доле правого лёгкого видны патологические изменения.</p>
+                </div>
+                
+                <div class="figure-item">
+                    <!-- Замените image4.png на ваш файл -->
+                    <img src="image4.png" alt="Двухмерное КТ-изображение">
+                    <p class="image-caption"><span class="image-number">Рис. 4</span> Пациент «А» — двухмерное КТ-изображение.</p>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <!-- Замените image5.png на ваш файл -->
+                <img src="image5.png" alt="Сравнение флюорографии и КТ">
+                <p class="image-caption"><span class="image-number">Рис. 5</span> Пациент «А» — сопоставление результатов флюорографии и компьютерной томографии.</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Дополнительные клинические случаи</h2>
+            
+            <div class="figure-grid">
+                <div class="figure-item">
+                    <!-- Замените image6.png на ваш файл -->
+                    <img src="image6.png" alt="Пациент Б - очаговые изменения">
+                    <p class="image-caption"><span class="image-number">Рис. 6</span> Пациент «Б» — похожий случай. На снимке отчётливо видны очаговые изменения (группы мелких очагов), характерные для туберкулёзного процесса.</p>
+                </div>
+                
+                <div class="figure-item">
+                    <!-- Замените image7.png на ваш файл -->
+                    <img src="image7.png" alt="Пациент Г - запущенная форма">
+                    <p class="image-caption"><span class="image-number">Рис. 7</span> Пациент «Г» — запущенная форма туберкулёза.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Иммунодиагностика: Диаскинтест</h2>
+            
+            <p><span class="highlight">Диаскинтест</span> — это иммунологический тест, определяющий реакцию организма на туберкулёзную инфекцию. Положительный результат указывает на инфицирование или раннюю стадию активного заболевания.</p>
+            
+            <div class="info-box">
+                <p>Туберкулёз может протекать в скрытой форме, которая не обнаруживается при флюорографии (см. Рис. 9). Поэтому пациентам с положительным Диаскинтестом всегда назначается компьютерная томография для уточнения диагноза.</p>
+            </div>
+            
+            <h3 class="subsection-title">Кому показан Диаскинтест?</h3>
+            
+            <p>Тест применяется для диагностики туберкулёзной инфекции у лиц всех возрастов, включая детей и подростков. Он используется как для индивидуальной, так и для массовой диагностики, а также для выявления лиц с высоким риском развития активного туберкулёза.</p>
+            
+            <h3 class="subsection-title">Ежегодное обследование с помощью Диаскинтеста рекомендуется тем же группам, что и ежегодная флюорография:</h3>
+            
+            <ol class="numbered-list">
+                <li><span class="highlight">Пациенты из групп риска</span> — люди с заболеваниями, снижающими иммунитет: сахарный диабет, патологии ЖКТ, хронические болезни лёгких и мочеполовой системы.</li>
+                
+                <li><span class="highlight">Декретированные группы</span> — работники пищевой промышленности, водоснабжения, образовательных и коммунальных учреждений, а также дети, посещающие школы и детские сады.</li>
+            </ol>
+            
+            <p>Контроль за обследованием пациентов из групп риска осуществляют участковые терапевты. Контроль за декретированными группами возлагается на работодателей и регламентируется распоряжением Минздрава Московской области №333-р.</p>
+            
+            <div class="highlight-box">
+                <p>Таким образом, иммунологические методы, включая Диаскинтест, позволяют выявлять туберкулёз на более ранних стадиях, чем флюорография, а в некоторых случаях — даже предотвращать развитие заболевания. Именно поэтому в современной практике иммунодиагностика считается приоритетным направлением в борьбе с туберкулёзом.</p>
+            </div>
+            
+            <p>Диаскинтест выполняется как кожная проба. При отказе от него возможна альтернатива — иммунологическое исследование крови на туберкулёз. Однако этот метод является платным и проводится за счёт пациента.</p>
+            
+            <p>Широко известная <span class="highlight">проба Манту</span> также относится к иммунологическим тестам на туберкулёз, но применяется преимущественно у детей до 8 лет.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Диагностический пример: случай пациента «Г»</h2>
+            
+            <div class="image-container">
+                <!-- Замените image8.png на ваш файл -->
+                <img src="image8.png" alt="Начальная форма туберкулеза">
+                <p class="image-caption"><span class="image-number">Рис. 8</span> Пациент «Г» — пример начальной формы туберкулёзного процесса в лёгких.</p>
+            </div>
+            
+            <div class="question-box">
+                <p class="question">...начальные изменения выявлены на компьютерной томограмме:</p>
+                
+                <div class="image-container" style="margin: 20px 0;">
+                    <!-- Замените image9.png на ваш файл -->
+                    <img src="image9.png" alt="КТ снимок пациента Г">
+                    <p class="image-caption"><span class="image-number">Рис. 10</span> Пациент «Г».</p>
+                </div>
+                
+                <p class="question">Вопрос: Почему пациенту была назначена компьютерная томография, если на флюорографическом снимке (Рис. 8) изменений не видно?</p>
+                
+                <p class="answer">Ответ: Пациенту предварительно был проведён Диаскинтест, который показал положительный результат. Это послужило основанием для назначения КТ, так как возникло предположение об инфицировании или начальной стадии заболевания, которые ещё не видны на стандартном флюорографическом снимке. Предположение подтвердилось.</p>
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <p>Раннее выявление туберкулёза позволяет остановить его распространение среди населения, а своевременное обнаружение инфицирования с помощью иммунодиагностики (Диаскинтест) даёт возможность предотвратить развитие болезни после проведения профилактического лечения.</p>
+            <p style="margin-top: 15px; font-weight: bold;">Надеемся, эта информация была для вас полезной и понятной! Осведомлённость помогает принимать правильные решения, действовать грамотно и, что особенно важно, — заботиться о своём здоровье.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Информационный материал о методах скрининга и диагностики туберкулёза.</p>
+            <p>Все изображения являются учебными материалами, текст адаптирован для пациентов</p>
+            <p style="margin-top: 15px; color: #95a5a6; font-size: 14px;"> Автор: Лукаш И. А.  
+Заведующий филиалом Клинский ГБУЗМО МОКПТД</p>
+        </div>
+    </div>
+    
+    <script>
+        // Скрипт для улучшения печати
+        document.addEventListener('DOMContentLoaded', function() {
+            // Добавляем специальные стили для печати
+            const printStyles = document.createElement('style');
+            printStyles.innerHTML = `
+                @media print {
+                    body {
+                        font-size: 12pt !important;
+                        line-height: 1.5 !important;
+                    }
+                    
+                    .article-container {
+                        padding: 15px !important;
+                        margin: 0 !important;
+                        box-shadow: none !important;
+                        border-radius: 0 !important;
+                    }
+                    
+                    .image-container, .figure-item {
+                        margin: 20px 0 !important;
+                        page-break-inside: avoid !important;
+                        break-inside: avoid !important;
+                    }
+                    
+                    img {
+                        max-width: 100% !important;
+                        height: auto !important;
+                    }
+                    
+                    .highlight-box, .info-box, .question-box, .conclusion {
+                        page-break-inside: avoid !important;
+                    }
+                    
+                    h1, h2, h3 {
+                        page-break-after: avoid !important;
+                    }
+                }
+            `;
+            document.head.appendChild(printStyles);
+            
+            // Добавляем нумерацию страниц при печати
+            window.addEventListener('beforeprint', function() {
+                const pageNumbers = document.createElement('div');
+                pageNumbers.id = 'page-numbers';
+                pageNumbers.style.cssText = 'position: fixed; bottom: 10px; right: 20px; font-size: 12px; color: #666;';
+                document.body.appendChild(pageNumbers);
+            });
+        });
+    </script>
+</body>
+</html>
